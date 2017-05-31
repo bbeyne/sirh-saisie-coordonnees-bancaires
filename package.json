@@ -1,0 +1,41 @@
+{
+
+  "name": "sirh-saisie-coordonnees-bancaires",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel dev:*",
+    "dev:server": "webpack-dev-server --open",
+    "dev:api": "json-server db.json -w",
+    "build": "cross-env NODE_ENV=prod webpack -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.1",
+    "file-loader": "^0.11.1",
+    "fileloader": "^2.0.0",
+    "json-server": "^0.10.0",
+    "loader": "^2.1.1",
+    "raw-loader": "^0.5.1",
+    "start": "^5.1.0",
+    "style": "0.0.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "json-server": "^0.10.0",
+    "lodash": "^4.17.4",
+    "md5": "^2.2.1"
+  }
+}

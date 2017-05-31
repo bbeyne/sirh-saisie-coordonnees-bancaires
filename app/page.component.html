@@ -1,0 +1,94 @@
+<h1>SGP - Saisie des coordonnées bancaires</h1>
+	<form class="form-horizontal">
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="textinput">Rechercher
+				par nom :</label>
+			<div class="col-md-2">
+				<input id="textinput" name="textinput" type="text" placeholder=""
+					class="form-control input-md">
+			</div>
+
+		</div>
+
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="selectbasic">Filtrer
+				par département :</label>
+			<div class="col-md-2">
+				<select id="selectbasic" name="selectbasic" class="form-control" multiple="multiple">
+				<option ng-click="$ctrl.onSelectDep('')" value=0>Tous les departements</option>
+					<option ng-repeat="dep in $ctrl.departements" ng-click="$ctrl.onSelectDep(dep.id)" value="{{dep.id}}">{{dep.nom}}</option>
+				</select>
+			</div>
+		</div>
+
+		<!--
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="singlebutton"></label>
+			<div class="col-md-1">
+				<button id="singlebutton" name="singlebutton"
+					class="btn btn-inverse">Rechercher</button>
+			</div>
+		</div> -->
+	</form>
+
+	<div>
+		<table class="col-lg-offset-1 col-lg-6">
+			<thead>
+				<tr>
+					<th class="col-lg=2">Matricule</th>
+					<th class="col-lg=2">Nom</th>
+					<th class="col-lg=2">Prenom</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="client in $ctrl.clients">
+				
+					<tr>
+						<th>{{client.matricule}}</th>
+						<th>{{client.nom}}</th>
+						<th>{{client.prenom}}</th>
+					</tr>
+			</tbody>
+		</table>
+		</div>
+		<div>
+		<form class="form-horizontal col-lg-5">
+			<div class="form-group">
+					<label class="col-md-1 control-label" for="textinput">Banque</label>
+					<div class="col-md-4">
+						<input id="textinput" name="textinput" type="text" placeholder=""
+							class="form-control input-md" required>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-1 control-label" for="textinput">IBAN</label>
+					<div class="col-md-4">
+						<input id="textinput" name="textinput" type="text" placeholder=""
+							class="form-control input-md" required>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-1 control-label" for="textinput">BIC</label>
+					<div class="col-md-4">
+						<input id="textinput" name="textinput" type="text" placeholder=""
+							class="form-control input-md" required>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-2 control-label" for="singlebutton"></label>
+					<div class="col-md-2" >
+						<button id="singlebutton" name="singlebutton"
+							class="btn btn-default">Sauvegarder</button>
+					</div>
+				</div>
+		</form>
+
+	</div>
+</div>

@@ -1,0 +1,24 @@
+{
+  "departement": [
+    {
+      "id": 1,
+      "name": "Comptabilités"
+    },
+    {
+      "id": 3,
+      "name": "Informatique"
+    }
+  ],
+  "client":[
+    {
+      "matricule": "bbb",
+      "nom": "Pierre",
+      "prenom": "Paul"
+    },
+    {
+      "matricule": "hhhh",
+      "nom": "henry",
+      "prenom": "huit"
+    }
+  ]
+}
